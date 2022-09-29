@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-dark: #3D9970;
+  --clr-white: #fff;
+}
+
+/* pseudo elements in css */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--clr-dark);
+}
+
+/* global css */
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+    background-color: lightcyan;
+    width: 700px;
+    height: 500px;
+    margin-top: 100px;
+    margin-left: 350px;
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    width: 100px;
+    height: 100px;
+    display: flex;margin-left: 150px;
+}
+.playername {
+    background-color: aliceblue;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.playerandcomp {
+    display: flex;
+    flex-direction: column;
+    margin-left:150px;
+}
+
+.wepons {
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rock , .paper,.scissors .spock , .lizard{
+    width: 100px;
+    height: 100px;
+}
+i {
+    font-size: 100px;
+}
+.end {
+    display: flex;
+    justify-content: space-between;
+}
+.rules {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.history{
+    font-size: 30px;
+    margin-right: 40px;
+}
+.comp {
+    margin-bottom: 20px;
+    margin-right: 30px;
+}
+
+
+
+
+
+
+

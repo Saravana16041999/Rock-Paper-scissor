@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock|paper|scissors</title>
+    <!-- font Awsm -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- instalize style -->
+    <link rel="stylesheet" href="/styls/instalize.css" />
+    <!-- <link rel="stylesheet" href="/styls/instalize.css" /> -->
+    <!-- style -->
+    <link rel="stylesheet" href="/styls/style.css" />
+    <!-- mobile style -->
+    <link rel="stylesheet" href="/styls/mobile.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading"><h1>ROCK|PAPER|SCISSORS</h1></div>
+      <div class="playername">
+        <div class="name"><input type="text" /><button>Submit</button></div>
+        <div class="playerandcomp">
+          <p>Fisrst Player =><samp id="Playername">Name</samp></p>
+          <p>Second Player => Ric</p>
+        </div>
+      </div>
+      <div class="wepons">
+        <div class="rock"><i class="fa-solid fa-hand-back-fist"></i></div>
+        <div class="paper"><i class="fa-solid fa-hand"></i></div>
+        <div class="scissors"><i class="fa-solid fa-hand-scissors"></i></div>
+        <div class="spock">
+          <i class="fa-solid fa-hand-spock"></i>
+        </div>
+        <div class="lizard"><i class="fa-solid fa-hand-lizard"></i></div>
+      </div>
+      <div class="end">
+        <div class="rules">
+          <ul>
+            <p>Rules:</p>
+            <li>Paper covers Rock.</li>
+            <li>Scissors cut Paper.</li>
+            <li>Rock cruches Lizard</li>
+            <li>Lizard poisons Spock</li>
+            <li>spock smaashes Scissor</li>
+            <li>Rock cruches Scissors</li>
+            <li>Scissors decapitates Lizard</li>
+            <li>Lizard eat Paper</li>
+            <li>Spock vaporizes Rock</li>
+            <li>Paper disproves Spock</li>
+          </ul>
+        </div>
+        <div class="history">
+          <p class="comp">
+            ME <span class="Compscore" id="Compscore"> 0</span>
+          </p>
+          <p class="person">
+            YOU <span class="Compscore" id="Plscore">0</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- script -->
+    <script src="/script/script.js"></script>
+  </body>
+</html>
