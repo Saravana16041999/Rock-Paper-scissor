@@ -61,6 +61,17 @@ li {
     flex-direction: column;
     margin-left:150px;
 }
+.name button {
+  font-size: 12px;
+  margin-top: 5px;
+  height: 20px;
+  width: 100px;
+  background-color: blueviolet;
+  border-radius: 6px;
+  border-style: none;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
 
 .wepons {
     height: 200px;
@@ -93,8 +104,14 @@ i {
     margin-right: 30px;
 }
 
-
-
+.wepons button {
+  background-color: lightcyan;
+  border-style: none;
+  cursor: pointer;
+}
+.wepons button:hover {
+  color: rgba(0, 0, 0, 0.569);
+}
 
 
 
