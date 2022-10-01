@@ -22,6 +22,16 @@ function nameOfPlayer(){
     randomcom()
 }
 nameOfPlayer()
-
-
-
+function Randomchoice(){
+    let comName = ['paper','scissor','rock','lizard','spock']
+    geneRandom = Math.trunc(Math.random() * comName.length)
+    comChoice = comName[geneRandom]
+    return comChoice
+}
+let Comchoice = Randomchoice() 
+function Gamemode(userchoice){
+    if (userchoice === comChoice ){
+        let scoreEl = document.getElementById('score')
+        scoreEl.innerText = "Game is Draw"
+    }
+}
