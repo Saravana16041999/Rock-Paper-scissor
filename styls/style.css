@@ -112,7 +112,11 @@ i {
 .wepons button:hover {
   color: rgba(0, 0, 0, 0.569);
 }
-
+.massage {
+  width: 300px;
+  height: 100px;
+  font-size: 10px;
+}
 
 
 
