@@ -9,8 +9,8 @@
     .container {
         width: 300px;
         height: 500px;
-        margin-top: 100px;
-        margin-left: 50px;
+        margin-top: 65px;
+        margin-left: 10px;
     }
     .playername {
         background-color: aliceblue;
@@ -19,10 +19,22 @@
         align-items: center;
         font-size: 12px;
     }
+    .name {
+        width: 150px;
+    }
+    button {
+        margin-top: 5px;
+        height: 20px;
+        width: 50px;
+        background-color: blueviolet;
+        border-radius: 6px;
+        border-style: none;
+        margin-bottom: 5px;
+    }
     .playerandcomp {
         display: flex;
         flex-direction: column;
-        margin-left:50px;
+        margin-left:30px;
     }
     
     .wepons {
