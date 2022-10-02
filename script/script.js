@@ -11,15 +11,15 @@ function randomcom(){
     let comName = ['Rick','Lee','Jack','Sam']
     geneRandom = Math.trunc(Math.random() * comName.length)
     comChoice = comName[geneRandom]
-    secondPlayerEl = document.getElementById('secondPlayer')
-    secondPlayerEl.textContent = comChoice
+    return comChoice
 }
 
 
 function nameOfPlayer(){
     let name = Firstplayer.value;
     ConformPlayer.textContent = name 
-    randomcom()
+    secondPlayerEl = document.getElementById('secondPlayer')
+    secondPlayerEl.textContent = randomcom()
 }
 nameOfPlayer()
 function Randomchoice(){
@@ -28,10 +28,78 @@ function Randomchoice(){
     comChoice = comName[geneRandom]
     return comChoice
 }
-let Comchoice = Randomchoice() 
-function Gamemode(userchoice){
-    if (userchoice === comChoice ){
-        let scoreEl = document.getElementById('score')
-        scoreEl.innerText = "Game is Draw"
+
+Comchoice = Randomchoice() 
+
+
+function showResult(userChoice, computerChoice) {
+    // comparing user and computer answers
+    if (userChoice === "rock") {
+        if (computerChoice === "rock") {
+        return 'draw';
+        } else if (computerChoice == "scissor") {
+        return 'you won';
+        }else if (computerChoice === "lizard") {
+            return 'you won';}
+        else {
+        return "you are lost";
+        }
     }
+    else if (userChoice === "paper") {
+        if (computerChoice === "paper") {
+        return 'draw';
+        } else if (computerChoice === "rock") {
+        return 'your lost';
+        }else if (computerChoice === "spock") {
+            return 'you won';}
+            else {
+        return "you are lost";
+        }
+    }
+    else if (userChoice === "scissor") {
+        if (computerChoice === "scissor") {
+        return 'draw';
+        } else if (computerChoice === "paper") {
+        return 'you won';
+        }else if (computerChoice === "lizard") {
+            return 'you won';
+        }else {
+        return "you are lost";
+        }
+    }
+    else if (userChoice ==='spock'){
+        if (computerChoice === 'spock'){
+            return 'draw';
+        }
+        else if (computerChoice === "scissor") {
+            return 'your won';
+        }
+        else if (computerChoice === "rock") {
+            return 'your won';
+        } else {
+            return "you are lose";
+        }
+    } 
+    else if (userChoice ==='lizard'){
+        if (computerChoice === 'lizard'){
+            return 'draw';
+        }
+        else if (computerChoice === "spock") {
+            return 'your won';
+        }
+        else if (computerChoice === "paper") {
+            return 'your won';
+        } else {
+            return "you are lose";
+        }
+    } 
+    
+}
+    
+
+
+function Gamemode(wepons){
+    const userChoice = wepons;
+    const computerChoice = Randomchoice();
+    const result = showResult(userChoice, computerChoice);
 }
