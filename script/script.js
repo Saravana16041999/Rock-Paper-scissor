@@ -15,8 +15,6 @@ function randomcom(){
     secondPlayerEl.textContent = comChoice
 }
 
-
-
 function nameOfPlayer(){
     let name = Firstplayer.value;
     ConformPlayer.textContent = name 
