@@ -6,21 +6,24 @@
 
 const Firstplayer = document.getElementById('Playername')
 const ConformPlayer = document.getElementById('firstname')
-    
+const secondPlayerEl = document.getElementById('secondPlayer')    
+
 function randomcom(){
     let comName = ['Rick','Lee','Jack','Sam']
     geneRandom = Math.trunc(Math.random() * comName.length)
     comChoice = comName[geneRandom]
-    return comChoice
+    secondPlayerEl.textContent = comChoice
 }
+
 
 
 function nameOfPlayer(){
     let name = Firstplayer.value;
     ConformPlayer.textContent = name 
-    secondPlayerEl = document.getElementById('secondPlayer')
-    secondPlayerEl.textContent = randomcom()
+    randomcom()
 }
+
+
 nameOfPlayer()
 function Randomchoice(){
     let comName = ['paper','scissor','rock','lizard','spock']
@@ -38,33 +41,33 @@ function showResult(userChoice, computerChoice) {
         if (computerChoice === "rock") {
         return 'draw';
         } else if (computerChoice == "scissor") {
-        return 'you won';
+        return 'won';
         }else if (computerChoice === "lizard") {
-            return 'you won';}
+            return 'won';}
         else {
-        return "you are lost";
+        return "lost";
         }
     }
     else if (userChoice === "paper") {
         if (computerChoice === "paper") {
         return 'draw';
         } else if (computerChoice === "rock") {
-        return 'your lost';
+        return 'lost';
         }else if (computerChoice === "spock") {
-            return 'you won';}
+            return 'won';}
             else {
-        return "you are lost";
+        return "lost";
         }
     }
     else if (userChoice === "scissor") {
         if (computerChoice === "scissor") {
         return 'draw';
         } else if (computerChoice === "paper") {
-        return 'you won';
+        return 'won';
         }else if (computerChoice === "lizard") {
-            return 'you won';
+            return 'won';
         }else {
-        return "you are lost";
+        return "lost";
         }
     }
     else if (userChoice ==='spock'){
@@ -72,12 +75,12 @@ function showResult(userChoice, computerChoice) {
             return 'draw';
         }
         else if (computerChoice === "scissor") {
-            return 'your won';
+            return 'won';
         }
         else if (computerChoice === "rock") {
-            return 'your won';
+            return 'won';
         } else {
-            return "you are lose";
+            return "lost";
         }
     } 
     else if (userChoice ==='lizard'){
@@ -85,21 +88,41 @@ function showResult(userChoice, computerChoice) {
             return 'draw';
         }
         else if (computerChoice === "spock") {
-            return 'your won';
+            return 'won';
         }
         else if (computerChoice === "paper") {
-            return 'your won';
+            return 'won';
         } else {
-            return "you are lose";
+            return "lost";
         }
     } 
     
 }
-    
+let computerEl = document.getElementById('Compscore')
+let playerEl = document.getElementById('Plscore')
+let scoreEL = document.getElementById('score')
 
+let userscore = 0
+let comscore = 0
+let drawel = 0 
+function showScore(result){
+    
+    if(result === 'won'){
+        userscore++
+        playerEl.textContent = userscore
+        scoreEL.textContent = `you won the match`
+    }else  if(result === 'lost'){
+        comscore++
+        computerEl.textContent = comscore
+        scoreEL.textContent = `computer won the match`
+    }else{
+        scoreEL.textContent = 'draw'
+    }
+}
 
 function Gamemode(wepons){
     const userChoice = wepons;
     const computerChoice = Randomchoice();
     const result = showResult(userChoice, computerChoice);
+    showScore(result)
 }
